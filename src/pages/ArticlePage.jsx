@@ -5,7 +5,7 @@ import { FaHandsClapping, FaComments, FaRetweet } from "react-icons/fa6";
 
 export default function ArticlePage() {
     const { author, contentTitle } = useParams();
-    const url = "http://localhost:5174/data.json";
+    const url = "http://localhost:5173/data.json";
     const [data, setData] = useState({});
 
     useEffect(() => {
