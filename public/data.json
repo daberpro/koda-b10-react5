@@ -1,0 +1,36 @@
+{
+    "Scott Batson":[
+        {
+            "title": "What Should Programmers Do While the AI Writes Code?",
+            "claps": 10400,
+            "comments": 394,
+            "publishedDate": "Sep 1, 2026",
+            "repost": 0,
+            "content": "Most every programmer is suffering the same growing pains right now. We’re Barry Allen (or Jay Garrick, if you’re old) with access to the Speed Force for the first time. Zooming around faster than our intent. Like many of you, AI came crashing into my daily work-life. It paid dividends immediately. Things that used to take me days, I was doing in hours. I could take on large, complex, meaty projects and deliver them fast. I was 5 times as productive. So, the next logical step? Well, I need to work on 5 times as many things, right? And that’s what I did. That’s what a lot of my friends and peers did.",
+            "tags": [
+                "AI",
+                "Programming",
+                "Ai Agent",
+                "productivity",
+                "Software Development"
+            ],
+            "image": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*fXHxk5foVZAL2ZR58_F5tw.png"
+        },
+        {
+            "title": "The Better the Model, the Less I Had to Tell It",
+            "claps": 500,
+            "comments": 14,
+            "publishedDate": "Oct 24, 2026",
+            "repost": 5,
+            "content": "Earlier this year, I was on parental leave as the tech industry changed rapidly. I was watching from afar as I rocked our baby to sleep, seeing every hot take that programming was dead. To not fall behind too much, I spun up a side project to see how much I could get out of Opus 4.6 doing 99% of my programming. I wrote about it, in case you want to see that journey. Vibe coding a game while my kids nap And what it’s shown me about working in the age of AI scottbatson.dev I got my reps in and came away thinking “this was powerful, but I’m still a necessary piece of this process.”",
+            "tags": [
+                "Web Development",
+                "Technology",
+                "Artificial Intelligence",
+                "Claude Code",
+                "Software Development"
+            ],
+            "image": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*h2OLMD010BlttnPMElajTQ.png"
+        }
+    ]
+}
