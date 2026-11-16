@@ -64,7 +64,7 @@ export default function HomePage() {
 
     return (
         <div className="w-full flex items-center justify-center flex-col">
-            <div className="w-225 flex items-center justify-start flex-col">
+            <div className="w-225 pt-20 flex items-center justify-start flex-col">
                 {
                     authors.map((author) => {
                         const article = [];
