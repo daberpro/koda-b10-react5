@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaHandsClapping, FaComments, FaRetweet } from "react-icons/fa6"
+import { Link } from "react-router";
 
 /**
  *
@@ -8,38 +9,40 @@ import { FaHandsClapping, FaComments, FaRetweet } from "react-icons/fa6"
  */
 function CardArticle(props) {
     return (
-        <div className="flex justify-center items-start flex-row w-full h-75 p-4">
-            <div className="flex flex-col gap-2 grow">
-                <div className="w-fit items-center flex flex-row gap-2">
-                    <div className="w-5 h-5 rounded-full bg-slate-100"></div>
-                    <span className="text-slate-100">{props.author}</span>
-                    <span className="text-slate-400">{props.publishedDate}</span>
+        <Link to={`/${props.author}/${props.title}`}>
+            <div className="flex justify-center items-start flex-row w-full h-75 p-4">
+                <div className="flex flex-col w-[70%] gap-2">
+                    <div className="w-fit items-center flex flex-row gap-2">
+                        <div className="w-5 h-5 rounded-full bg-slate-100"></div>
+                        <span className="text-slate-100">{props.author}</span>
+                        <span className="text-slate-400">{props.publishedDate}</span>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <span className="text-white font-bold text-4xl">{props.title}</span>
+                        <p className="text-slate-300">
+                            {props.content?.substring(0,100) + (props.content?.length > 100 ? "..." : " ")}
+                        </p>
+                    </div>
+                    <div className="w-fit *:text-white flex flex-row gap-4">
+                        <div className="flex flex-row gap-2 items-center justify-center">
+                            <FaHandsClapping />
+                            {props.claps}
+                        </div>
+                        <div className="flex flex-row gap-2 items-center justify-center">
+                            <FaComments />
+                            {props.comments}
+                        </div>
+                        <div className="flex flex-row gap-2 items-center justify-center">
+                            <FaRetweet />
+                            {props.repost}
+                        </div>
+                    </div>
                 </div>
-                <div className="flex flex-col gap-4">
-                    <span className="text-white font-bold text-4xl">{props.title}</span>
-                    <p className="text-slate-300">
-                        {props.content?.substring(0,100) + (props.content?.length > 100 ? "..." : " ")}
-                    </p>
-                </div>
-                <div className="w-fit *:text-white flex flex-row gap-4">
-                    <div className="flex flex-row gap-2 items-center justify-center">
-                        <FaHandsClapping />
-                        {props.claps}
-                    </div>
-                    <div className="flex flex-row gap-2 items-center justify-center">
-                        <FaComments />
-                        {props.comments}
-                    </div>
-                    <div className="flex flex-row gap-2 items-center justify-center">
-                        <FaRetweet />
-                        {props.repost}
-                    </div>
+                <div className="grow justify-center items-center flex">
+                    <img src={props.image} className="w-50 h-37.5 rounded-lg"/>
                 </div>
             </div>
-            <div className="w-fit">
-                <img src={props.image} className="w-50 h-37.5 rounded-lg"/>
-            </div>
-        </div>
+        </Link>
     );
 }
 
@@ -61,7 +64,7 @@ export default function HomePage() {
 
     return (
         <div className="w-full flex items-center justify-center flex-col">
-            <div className="w-[900px] flex items-center justify-start flex-col">
+            <div className="w-225 flex items-center justify-start flex-col">
                 {
                     authors.map((author) => {
                         const article = [];

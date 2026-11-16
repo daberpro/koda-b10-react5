@@ -8,7 +8,7 @@ const router = createBrowserRouter([
         element: <HomePage/>
     },
     {
-        path: "/:user/:contentTitle",
+        path: "/:author/:contentTitle",
         element: <ArticlePage/>
     }
 ])
