@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import ArticlePage from "./pages/ArticlePage";
 import HomeLayout from "./components/HomeLayout";
 import FeaturePage from "./pages/FeaturePage";
+import SearchPage from "./pages/SearchPage";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
     {
         path: "/:author/:contentTitle",
         element: <ArticlePage/>
+    },
+    {
+        path: "/search",
+        element: <SearchPage/>
     }
 ])
 
