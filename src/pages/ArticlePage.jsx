@@ -12,7 +12,7 @@ export default function ArticlePage() {
         async function getData() {
             const raw = await fetch(url);
             const json = await raw.json();
-            setData(json[author].find(({ title }) => title === contentTitle));
+            setData(json[author].articles.find(({ title }) => title === contentTitle));
         }
         getData();
     }, []);

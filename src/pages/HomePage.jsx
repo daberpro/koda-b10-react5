@@ -3,8 +3,29 @@ import { FaHandsClapping, FaComments, FaRetweet } from "react-icons/fa6"
 import { Link } from "react-router";
 
 /**
+ * @typedef {Object} Article
  *
- * @param {{ image: String, author: String, title: String,claps: Number,comments: Number, publishedDate: String,repost: Number,content: String, tags: String[]}} props
+ * @property {String} image
+ * @property {String} author
+ * @property {String} title
+ * @property {Number} claps
+ * @property {Number} comments
+ * @property {String} publishedDate
+ * @property {Number} repost
+ * @property {String} content
+ * @property {String[]} tags
+ */
+
+/**
+ * @typedef {Object} Author
+ *
+ * @property {String} avatar
+ * @property {Article[]} articles
+ */
+
+/**
+ *
+ * @param {Author} props
  * @returns
  */
 function CardArticle(props) {
@@ -13,7 +34,7 @@ function CardArticle(props) {
             <div className="flex justify-center items-start flex-row w-full h-75 p-4">
                 <div className="flex flex-col w-[70%] gap-2">
                     <div className="w-fit items-center flex flex-row gap-2">
-                        <div className="w-5 h-5 rounded-full bg-slate-100"></div>
+                        <img src={props.avatar} className="w-8 h-8 rounded-full bg-slate-100"/>
                         <span className="text-slate-100">{props.author}</span>
                         <span className="text-slate-400">{props.publishedDate}</span>
                     </div>
@@ -68,9 +89,9 @@ export default function HomePage() {
                 {
                     authors.map((author) => {
                         const article = [];
-                        data[author].forEach((d,i) => {
+                        data[author].articles.forEach((d,i) => {
                             article.push(
-                                <CardArticle key={author + i} author={author} {...d} />
+                                <CardArticle avatar={data[author].avatar} key={author + i} author={author} {...d} />
                             );
                         });
                         return article;
